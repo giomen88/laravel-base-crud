@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Movie;
+use App\Models\Comic;
 use Illuminate\Http\Request;
 
-class MovieController extends Controller
+class ComicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class MovieController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Movie  $movie
+     * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function show(Movie $movie)
+    public function show(Comic $comic)
     {
         //
     }
@@ -52,10 +52,10 @@ class MovieController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Movie  $movie
+     * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function edit(Movie $movie)
+    public function edit(Comic $comic)
     {
         //
     }
@@ -64,10 +64,10 @@ class MovieController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Movie  $movie
+     * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Movie $movie)
+    public function update(Request $request, Comic $comic)
     {
         //
     }
@@ -75,10 +75,10 @@ class MovieController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Movie  $movie
+     * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Movie $movie)
+    public function destroy(Comic $comic)
     {
         //
     }
