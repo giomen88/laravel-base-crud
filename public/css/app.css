@@ -10855,3 +10855,245 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Open Sans", Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 70%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+header nav {
+  height: 100px;
+  background-image: linear-gradient(#0C7CEC 10px, #fcfcfc 10px);
+  padding-top: 40px;
+}
+header nav .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .container .logo {
+  width: 60px;
+  padding-bottom: 30px;
+}
+header nav .container .links {
+  height: 100%;
+}
+header nav .container .links ul {
+  height: 100%;
+  display: flex;
+}
+header nav .container .links ul li {
+  height: 100%;
+  font-weight: bold;
+  margin: 0 10px;
+}
+header nav .container .links ul li.active {
+  border-bottom: 5px solid #0C7CEC;
+}
+header nav .container .links ul li a {
+  vertical-align: middle;
+  color: #000000;
+  padding: 5px;
+}
+header nav .container .links ul li a:hover {
+  color: #0C7CEC;
+}
+header .jumbotron {
+  height: 300px;
+  background-image: url(../images/jumbotron.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+main {
+  background-color: #000000;
+  color: #fcfcfc;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+main .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+main .container .comic-card {
+  flex-basis: 16.6666666667%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+main .container .comic-card img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  margin-bottom: 10px;
+}
+main .container .comic-card a {
+  color: #fcfcfc;
+  font-size: 0.3rem;
+}
+
+.navbar {
+  height: 120px;
+  background-color: #0C7CEC;
+  position: relative;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .link-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fcfcfc;
+  font-size: 0.8rem;
+}
+.navbar .link-card img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+#comic {
+  color: #2b2b7a;
+  position: relative;
+}
+#comic .top {
+  background-image: linear-gradient(#0C7CEC 50px, #fcfcfc 10px);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+#comic .top .container {
+  display: flex;
+}
+#comic .top .text {
+  flex-basis: 70%;
+  margin: 0 20px;
+}
+#comic .top .text h1, #comic .top .text .h1 {
+  margin-bottom: 20px;
+}
+#comic .top figure {
+  flex-basis: 30%;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#comic .top figure strong {
+  font-size: 0.8rem;
+  align-self: flex-end;
+  margin-bottom: 5px;
+  color: #808080;
+}
+#comic .top .details {
+  height: 50px;
+  background-color: #3cb93c;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+#comic .top .details .availability {
+  text-align: end;
+}
+
+footer {
+  height: 400px;
+}
+footer .top {
+  height: 300px;
+  background-image: url(../images/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+footer .top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .top .container nav {
+  color: #fcfcfc;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer .top .container nav .col {
+  margin: 10px 10px;
+}
+footer .top .container nav p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+footer .top .container nav a {
+  font-size: 0.8rem;
+  color: #808080;
+}
+footer .top .container .big-logo {
+  width: 450px;
+}
+footer .bottom {
+  height: 100px;
+  background-image: linear-gradient(#303030 90px, #000000 90px);
+  position: relative;
+}
+footer .bottom nav {
+  padding-bottom: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .bottom nav button {
+  background-color: transparent;
+  border: 2px solid #0C7CEC;
+  color: #fcfcfc;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+}
+footer .bottom nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .bottom nav ul li {
+  margin: 0 10px;
+}
+footer .bottom nav ul li .follow {
+  font-weight: bold;
+  color: #0C7CEC;
+}

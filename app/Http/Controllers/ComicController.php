@@ -14,7 +14,13 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $header_links = config('headerlinks');
+
+        $navbar_links = config('navbarlinks');
+
+        $comics = Comic::all(); 
+
+        return view('comics.index', compact('comics', 'header_links', 'navbar_links'));
     }
 
     /**
@@ -24,7 +30,11 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        $header_links = config('headerlinks');
+
+        $navbar_links = config('navbarlinks');
+
+        return view('comics.create', compact('header_links', 'navbar_links'));
     }
 
     /**
@@ -35,7 +45,21 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+
+        $comic = new Comic();
+
+        /* $comic->title = $data['title'];
+        $comic->description = $data['description'];
+        $comic->thumb = $data['thumb'];
+        $comic->price = $data['price']; */
+
+        $comic->fill($data);
+
+        $comic->save();
+
+        return redirect()->route('comics.index');
     }
 
     /**

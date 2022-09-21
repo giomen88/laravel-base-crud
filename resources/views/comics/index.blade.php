@@ -7,9 +7,10 @@
 <main>
     <div id="content">
         <div class="container"> 
-            @foreach($comics_list as $comic)
-            <div class="card">
-                <a href=" {{route('comics.show', ['id' => $loop->index])}} ">
+            @foreach($comics as $comic)
+            <div class="comic-card">
+                <a href="#">
+                {{-- <a href=" {{route('comics.show', ['id' => $loop->index])}} "> --}}
                 <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}" />
                 <h1>{{ $comic['title'] }}</h1>
                 </a>
@@ -25,12 +26,12 @@
 
 <div class="navbar">
     <div class="container">
-        @foreach($footer_links as $footer_link)
-        <div class="card">
+        @foreach($navbar_links as $navbar_link)
+        <div class="link-card">
             <figure>
-                <a href=""><img src="{{ asset($footer_link['url']) }}" alt="{{ $footer_link['text'] }}"></a>
+                <a href=""><img src="{{ asset($navbar_link['url']) }}" alt="{{ $navbar_link['text'] }}"></a>
             </figure>
-            <figcaption>{{ $footer_link['text']}}</figcaption>
+            <figcaption>{{ $navbar_link['text'] }}</figcaption>
         </div>
         @endforeach
     </div>
