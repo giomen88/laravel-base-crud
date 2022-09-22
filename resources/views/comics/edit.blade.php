@@ -6,12 +6,13 @@
 
     <main class="p-5">
 
-        <div class="row">
+        <div class="row text-white">
             <div class="col-12 text-center mb-3">
-                <h1>Aggiungi un Comic</h1>
+                <h1>Modifica un Comic</h1>
             </div>
             <div class="col-6 offset-3">
-                <form action="{{route('comics.update')}} " method="POST">
+                <form action="{{route('comics.update', $comic)}} " method="POST">
+
                 @csrf
                 @method('PUT')
                     <div class="mb-3">
@@ -43,9 +44,10 @@
                         <input type="text" class="form-control" id="type" name="type" placeholder="Genere" value=" {{$comic['type']}} ">
                     </div>
                     <div class="text-end">
-                        <button type="submit" class="btn btn-primary">Aggiungi</button>
+                        <button type="submit" class="btn btn-primary">Modifica</button>
                     </div>
                 </form>
+
             </div>
         </div>
  </main>

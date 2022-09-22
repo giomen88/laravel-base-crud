@@ -14,13 +14,11 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $header_links = config('headerlinks');
-
         $navbar_links = config('navbarlinks');
 
         $comics = Comic::all(); 
 
-        return view('comics.index', compact('comics', 'header_links', 'navbar_links'));
+        return view('comics.index', compact('comics', 'navbar_links'));
     }
 
     /**
@@ -30,11 +28,9 @@ class ComicController extends Controller
      */
     public function create()
     {
-        $header_links = config('headerlinks');
-
         $navbar_links = config('navbarlinks');
 
-        return view('comics.create', compact('header_links', 'navbar_links'));
+        return view('comics.create', compact('navbar_links'));
     }
 
     /**
@@ -84,7 +80,7 @@ class ComicController extends Controller
 
         $navbar_links = config('navbarlinks');
 
-        return view('comics.edit', $comic);
+        return view('comics.edit', compact('comic', 'navbar_links'));
     }
 
     /**
@@ -104,7 +100,7 @@ class ComicController extends Controller
 
         $comic->update($data);
 
-        return redirect()->route('comics.index', $comic);
+        return redirect()->route('comics.index');
     }
 
     /**
@@ -115,6 +111,8 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return redirect()->route('comics.index');
     }
 }

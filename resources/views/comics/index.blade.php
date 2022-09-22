@@ -9,7 +9,7 @@
         <div class="container"> 
             @foreach($comics as $comic)
             <div class="comic-card text-center bg-white rounded d-flex flex-column justify-content-between py-2">
-                <a href=" {{route('comics.show', $comic->id)}} ">
+                <a href="{{route('comics.show', $comic->id)}}">
                 <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}" />
                 <h6 class="mb-4">{{ $comic['title'] }}</h6>
                 <p> {{ $comic['series'] }} </p>

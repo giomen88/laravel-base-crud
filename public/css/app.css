@@ -10872,6 +10872,7 @@ img {
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 a {
@@ -10984,19 +10985,12 @@ main .comic-card a img {
 }
 #comic .top .text {
   flex-basis: 70%;
-  margin: 0 20px;
+  margin: 20px 20px;
 }
 #comic .top .text h1, #comic .top .text .h1 {
   margin-bottom: 20px;
 }
-#comic .top figure {
-  flex-basis: 30%;
-  margin: 0 20px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-#comic .top figure strong {
+#comic .top strong {
   font-size: 0.8rem;
   align-self: flex-end;
   margin-bottom: 5px;
@@ -11012,7 +11006,6 @@ main .comic-card a img {
   align-items: center;
   padding: 0 10px;
   color: #fff;
-  font-size: 0.9rem;
 }
 #comic .top .details .availability {
   text-align: end;
