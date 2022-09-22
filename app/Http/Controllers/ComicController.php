@@ -70,7 +70,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        //
+        return view('comics.show', compact('comic'));
     }
 
     /**
@@ -81,7 +81,10 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+
+        $navbar_links = config('navbarlinks');
+
+        return view('comics.edit', $comic);
     }
 
     /**
@@ -93,7 +96,15 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+
+        // $comic->fill($data);
+
+        // $comic->save();
+
+        $comic->update($data);
+
+        return redirect()->route('comics.index', $comic);
     }
 
     /**

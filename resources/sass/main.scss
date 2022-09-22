@@ -1,33 +1,33 @@
 main {
     background-color: #000000;
-    color: #fcfcfc;
     padding-top: 50px;
     padding-bottom: 30px;
   
     .container {
       display: flex;
-      justify-content: space-between;
       align-items: stretch;
       flex-wrap: wrap;
-  
-      .comic-card {
-        flex-basis: calc(100% / 6);
-        text-align: center;
-        margin-bottom: 20px;
-  
-        img {
+    }
+    .comic-card {
+      margin: 20px;
+      flex-basis: calc(100% / 6 - 40px);
+      min-height: 250px;
+      box-shadow: 1px 3px 10px 5px #6b6a6a;
+
+        a {
+          color: #000000;
+
+          img {
           width: 150px;
           height: 150px;
           object-fit: cover;
           object-position: top;
           margin-bottom: 10px;
+          }
         }
   
-        a {
-          color: #fcfcfc;
-          font-size: 0.3rem;
-        }
+        
       }
-    }
+    
   }
   

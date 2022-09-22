@@ -7,32 +7,29 @@ footer {
         background-repeat: no-repeat;
         background-position: bottom;
         background-size: cover;
+        padding: 20px 0;
 
         .container {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-
 
             nav {
                 color:#fcfcfc;
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
-
-                .col {
-                    margin: 10px 10px;
-                }
-
-                p {
+                flex-wrap: wrap;
+            
+                    p {
                     font-weight: bold;
                     margin-bottom: 5px;
-                }
+                    }
 
-                a {
+                    a {
                     font-size: 0.8rem;
                     color: #808080;
-                }
+                    }
+                
             }
 
             .big-logo {
@@ -44,34 +41,39 @@ footer {
     .bottom {
         height: 100px;
         background-image: linear-gradient(#303030 90px, #000000 90px);
-        position: relative;
+        // position: relative;
+        
+        .container {
+            height: 100%;
+            
+            nav {
+            padding-bottom: 10px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;    
 
-        nav {
-        padding-bottom: 10px;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;    
+           
+                button {
+                    background-color: transparent;
+                    border: 2px solid $primary-blue;
+                    color: #fcfcfc;
+                    font-weight: bold;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
 
-            button {
-                background-color: transparent;
-                border: 2px solid $primary-blue;
-                color: #fcfcfc;
-                font-weight: bold;
-                padding: 10px;
-                cursor: pointer;
-            }
-            ul {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                    li {
+                        margin: 0 10px;
 
-                li {
-                    margin: 0 10px;
-
-                    .follow {
-                        font-weight: bold;
-                        color: $primary-blue;
+                        .follow {
+                            font-weight: bold;
+                            color: $primary-blue;
+                        }
                     }
                 }
             }

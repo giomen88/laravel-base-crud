@@ -8,11 +8,14 @@
     <div id="content">
         <div class="container"> 
             @foreach($comics as $comic)
-            <div class="comic-card">
-                <a href="#">
-                {{-- <a href=" {{route('comics.show', ['id' => $loop->index])}} "> --}}
+            <div class="comic-card text-center bg-white rounded d-flex flex-column justify-content-between py-2">
+                <a href=" {{route('comics.show', $comic->id)}} ">
                 <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}" />
-                <h1>{{ $comic['title'] }}</h1>
+                <h6 class="mb-4">{{ $comic['title'] }}</h6>
+                <p> {{ $comic['series'] }} </p>
+                {{-- <p> {{ ucfirst($comic['type']) }} </p>
+                <p> {{ $comic['sale_date'] }} </p>
+                <p> € {{ $comic['price'] }} </p> --}}
                 </a>
             </div>
             @endforeach

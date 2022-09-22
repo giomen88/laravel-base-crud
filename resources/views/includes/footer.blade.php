@@ -1,8 +1,8 @@
 <footer>    
     <div class="top">
             <div class="container">
-                        <nav>
-                            <div class="col dc-comics">
+                        <nav class="col-6">
+                            <div class="dc-comics">
                             <p>DC COMICS</p>
                                 <ul>
                                     <li><a href="">Characters</a></li>
@@ -12,14 +12,14 @@
                                     <li><a href="">Games</a></li>
                                     <li><a href="">Videos</a></li>
                                     <li><a href="">News</a></li>
-                                        <p>SHOP</p>
+                                    <p>SHOP</p>
                                     <ul class="shop">
                                         <li><a href="">Shop DC</a></li>
                                         <li><a href="">Shop DC Collectibles</a></li>
                                     </ul>
                                 </ul>
                             </div>
-                            <div class="col dc">
+                            <div class="dc">
                                 <p>DC</p>
                                 <ul>
                                     <li><a href="">Terms of use</a></li>
@@ -36,7 +36,7 @@
                                 </ul>
                             </div>
 
-                            <div class="col sites">
+                            <div class="sites">
                                 <p>SITES</p>
                                 <ul>
                                     <li><a href="">DC</a></li>
@@ -48,8 +48,8 @@
                             </div>
                         </nav>
 
-                    <div class="big-logo">
-                        <img src="{{ asset('images/dc-logo-bg.png') }}" alt="Dc-logo">
+                    <div class="col-6 big-logo">
+                        <img src="{{ asset('images/dc-logo-bg.png') }}" alt="Dc-logo" class="img-fluid">
                     </div>
             </div>
         </div>

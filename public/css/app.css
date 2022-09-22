@@ -10878,12 +10878,6 @@ a {
   text-decoration: none;
 }
 
-.container {
-  max-width: 70%;
-  height: 100%;
-  margin: 0 auto;
-}
-
 header nav {
   height: 100px;
   background-image: linear-gradient(#0C7CEC 10px, #fcfcfc 10px);
@@ -10932,22 +10926,24 @@ header .jumbotron {
 
 main {
   background-color: #000000;
-  color: #fcfcfc;
   padding-top: 50px;
   padding-bottom: 30px;
 }
 main .container {
   display: flex;
-  justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
 }
-main .container .comic-card {
-  flex-basis: 16.6666666667%;
-  text-align: center;
-  margin-bottom: 20px;
+main .comic-card {
+  margin: 20px;
+  flex-basis: calc(16.6666666667% - 40px);
+  min-height: 250px;
+  box-shadow: 1px 3px 10px 5px #6b6a6a;
 }
-main .container .comic-card img {
+main .comic-card a {
+  color: #000000;
+}
+main .comic-card a img {
   width: 150px;
   height: 150px;
   -o-object-fit: cover;
@@ -10956,15 +10952,10 @@ main .container .comic-card img {
      object-position: top;
   margin-bottom: 10px;
 }
-main .container .comic-card a {
-  color: #fcfcfc;
-  font-size: 0.3rem;
-}
 
 .navbar {
-  height: 120px;
+  height: 100px;
   background-color: #0C7CEC;
-  position: relative;
 }
 .navbar .container {
   display: flex;
@@ -10990,9 +10981,6 @@ main .container .comic-card a {
   background-image: linear-gradient(#0C7CEC 50px, #fcfcfc 10px);
   padding-top: 100px;
   padding-bottom: 50px;
-}
-#comic .top .container {
-  display: flex;
 }
 #comic .top .text {
   flex-basis: 70%;
@@ -11039,20 +11027,18 @@ footer .top {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
+  padding: 20px 0;
 }
 footer .top .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 footer .top .container nav {
   color: #fcfcfc;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-}
-footer .top .container nav .col {
-  margin: 10px 10px;
+  flex-wrap: wrap;
 }
 footer .top .container nav p {
   font-weight: bold;
@@ -11068,16 +11054,18 @@ footer .top .container .big-logo {
 footer .bottom {
   height: 100px;
   background-image: linear-gradient(#303030 90px, #000000 90px);
-  position: relative;
 }
-footer .bottom nav {
+footer .bottom .container {
+  height: 100%;
+}
+footer .bottom .container nav {
   padding-bottom: 10px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-footer .bottom nav button {
+footer .bottom .container nav button {
   background-color: transparent;
   border: 2px solid #0C7CEC;
   color: #fcfcfc;
@@ -11085,15 +11073,15 @@ footer .bottom nav button {
   padding: 10px;
   cursor: pointer;
 }
-footer .bottom nav ul {
+footer .bottom .container nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-footer .bottom nav ul li {
+footer .bottom .container nav ul li {
   margin: 0 10px;
 }
-footer .bottom nav ul li .follow {
+footer .bottom .container nav ul li .follow {
   font-weight: bold;
   color: #0C7CEC;
 }
