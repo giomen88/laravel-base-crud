@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-7 d-flex">
-                        <div class="text">
+                        <div class="text ps-5">
                             <h1>{{$comic['title']}}</h1>
                             <div class="details rounded">
                                 <div class="price">PRICE: <strong>€ {{$comic['price']}}</strong> </div>
@@ -21,12 +21,12 @@
                             <h5> {{$comic['sale_date']}} </h5>
                         </div>
                     </div>
-                    <div class="col-5 d-flex flex-column text-center">
-                            <strong class="text-end">ADVERTISEMENT</strong>
+                    <div class="col-5 d-flex flex-column align-items-end pe-5">
+                            <strong>ADVERTISEMENT</strong>
                             <img src="{{$comic['thumb']}}" alt="" class="mb-3">
                     </div>
                 
-                    <div class="div.col-12 d-flex mt-2">
+                    <div class="div.col-12 d-flex justify-content-center mt-2">
                         <a class="btn btn-primary me-2" href=" {{route('comics.edit', $comic)}} ">Modifica</a>
                         <form action="{{route('comics.destroy', $comic)}} " method="POST">  
                         @csrf
@@ -42,4 +42,21 @@
         </div>
                 
     </section>
+@endsection
+
+@section ('navbar-content')
+
+<div class="navbar">
+    <div class="container">
+        @foreach($navbar_links as $navbar_link)
+        <div class="link-card">
+            <figure>
+                <a href=""><img src="{{ asset($navbar_link['url']) }}" alt="{{ $navbar_link['text'] }}"></a>
+            </figure>
+            <figcaption>{{ $navbar_link['text'] }}</figcaption>
+        </div>
+        @endforeach
+    </div>
+</div>   
+
 @endsection

@@ -10984,9 +10984,11 @@ main .comic-card a img {
   padding-top: 100px;
   padding-bottom: 50px;
 }
+#comic .top img {
+  width: 80%;
+}
 #comic .top .text {
   flex-basis: 70%;
-  margin: 20px 20px;
 }
 #comic .top .text h1, #comic .top .text .h1 {
   margin-bottom: 20px;
@@ -11007,6 +11009,10 @@ main .comic-card a img {
   align-items: center;
   padding: 0 10px;
   color: #fff;
+}
+#comic .top .details strong {
+  color: #2b2b7a;
+  font-size: 1.2rem;
 }
 #comic .top .details .availability {
   text-align: end;
