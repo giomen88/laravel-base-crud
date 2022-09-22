@@ -2,7 +2,7 @@
     <div class="top">
             <div class="container">
                         <nav class="col-6">
-                            <div class="dc-comics">
+                            <div class="dc-comics me-3">
                             <p>DC COMICS</p>
                                 <ul>
                                     <li><a href="">Characters</a></li>
@@ -19,7 +19,7 @@
                                     </ul>
                                 </ul>
                             </div>
-                            <div class="dc">
+                            <div class="dc me-3">
                                 <p>DC</p>
                                 <ul>
                                     <li><a href="">Terms of use</a></li>
@@ -48,8 +48,8 @@
                             </div>
                         </nav>
 
-                    <div class="col-6 big-logo">
-                        <img src="{{ asset('images/dc-logo-bg.png') }}" alt="Dc-logo" class="img-fluid">
+                    <div class="col-6 d-flex justify-content-end">
+                        <img src="{{ asset('images/dc-logo-bg.png') }}" alt="Dc-logo" class="big-logo img-fluid">
                     </div>
             </div>
         </div>

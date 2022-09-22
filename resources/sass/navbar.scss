@@ -1,7 +1,7 @@
 .navbar {
     height: 100px;
     background-color: #0C7CEC;
-    // position: relative;
+    z-index: 1;
 
     .container {
         display: flex;

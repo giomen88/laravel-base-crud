@@ -41,7 +41,8 @@
                         <label for="type" class="form-label">Genere</label>
                         <input type="text" class="form-control" id="type" name="type" placeholder="Genere">
                     </div>
-                    <div class="text-end">
+                    <div class="d-flex justify-content-between">
+                        <a class="btn btn-success" href="{{route('comics.index')}} ">Torna alla lista</a>
                         <button type="submit" class="btn btn-primary">Aggiungi</button>
                     </div>
                 </form>

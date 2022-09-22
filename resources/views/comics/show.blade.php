@@ -16,9 +16,9 @@
                             </div>
 
                             <p class="description mt-4">{{$comic['description']}}</p>
-                            <h4> {{$comic['series']}} </h4>
-                            <h4> {{ucfirst($comic['type'])}} </h4>
-                            <h4> {{$comic['sale_date']}} </h4>
+                            <h5> {{$comic['series']}} </h5>
+                            <h5> {{ucfirst($comic['type'])}} </h5>
+                            <h5> {{$comic['sale_date']}} </h5>
                         </div>
                     </div>
                     <div class="col-5 d-flex flex-column text-center">
@@ -31,10 +31,11 @@
                         <form action="{{route('comics.destroy', $comic)}} " method="POST">  
                         @csrf
                         @method('delete')
-                            <div class="text-end">
+                            <div>
                                 <button type="submit" class="btn btn-danger">Cancella</button>
                             </div>
-                        </form>        
+                        </form>
+                        <a class="btn btn-success ms-2" href="{{route('comics.index')}} ">Torna alla lista</a>        
                     </div>
                 </div>
             </div>

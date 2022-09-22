@@ -10957,6 +10957,7 @@ main .comic-card a img {
 .navbar {
   height: 100px;
   background-color: #0C7CEC;
+  z-index: 1;
 }
 .navbar .container {
   display: flex;
@@ -11012,10 +11013,10 @@ main .comic-card a img {
 }
 
 footer {
-  height: 400px;
+  height: 450px;
 }
 footer .top {
-  height: 300px;
+  height: 350px;
   background-image: url(../images/footer-bg.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
@@ -11025,11 +11026,13 @@ footer .top {
 footer .top .container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
 }
 footer .top .container nav {
   color: #fcfcfc;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
 }
@@ -11043,10 +11046,13 @@ footer .top .container nav a {
 }
 footer .top .container .big-logo {
   width: 450px;
+  position: absolute;
+  bottom: -70px;
 }
 footer .bottom {
   height: 100px;
   background-image: linear-gradient(#303030 90px, #000000 90px);
+  position: relative;
 }
 footer .bottom .container {
   height: 100%;
