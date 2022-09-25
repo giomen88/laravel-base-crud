@@ -13,7 +13,7 @@
 
     @yield('main-content')
 
-    @yield('navbar-content')
+    @include('includes.navbar')
 
     @include('includes.footer')
 </body>

@@ -10,20 +10,13 @@ main {
     }
     .comic-card {
       margin: 20px;
-      flex-basis: calc(100% / 6 - 40px);
+      padding: 20px;
+      width: calc(100% / 6 - 40px);
       min-height: 250px;
       box-shadow: 1px 3px 10px 5px #6b6a6a;
 
         a {
           color: #000000;
-
-          img {
-          width: 150px;
-          height: 150px;
-          object-fit: cover;
-          object-position: top;
-          margin-bottom: 10px;
-          }
         }
   
         

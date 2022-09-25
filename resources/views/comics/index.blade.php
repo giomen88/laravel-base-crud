@@ -8,10 +8,10 @@
     <div id="content">
         <div class="container"> 
             @foreach($comics as $comic)
-            <div class="comic-card text-center bg-white rounded d-flex flex-column justify-content-between py-2">
+            <div class="comic-card text-center bg-white rounded d-flex flex-column justify-content-between">
                 <a href="{{route('comics.show', $comic->id)}}">
-                <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}" />
-                <h6 class="mb-4">{{ $comic['title'] }}</h6>
+                <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}" class="img-fluid mb-2" />
+                <h6>{{ $comic['title'] }}</h6>
                 <p> {{ $comic['series'] }} </p>
                 {{-- <p> {{ ucfirst($comic['type']) }} </p>
                 <p> {{ $comic['sale_date'] }} </p>

@@ -40,10 +40,15 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    { 
+        $request->validate(
+            [
+                'title'=> 'required|string|unique:comics',
+                ]
+            );
+
         $data = $request->all();
-
-
+        
         $comic = new Comic();
 
         /* $comic->title = $data['title'];
@@ -94,6 +99,13 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $request->validate(
+            [
+                'title'=> 'required|string|unique:comics',
+                ]
+            );
+
+
         $data = $request->all();
 
         // $comic->fill($data);

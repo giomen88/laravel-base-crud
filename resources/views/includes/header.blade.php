@@ -1,7 +1,7 @@
 <header>
     <nav>
         <div class="container">
-            <div class="logo"><a href=""><img src="{{ asset('images/dc-logo.png')}}" alt=""></a></div>
+            <div class="logo"><a href=" {{route('home')}} "><img src="{{ asset('images/dc-logo.png')}}" alt=""></a></div>
             <div class="links">
                 <ul>
                     {{-- @foreach($header_links as $index=>$header_link) --}}

@@ -4,6 +4,16 @@
 
 @section('main-content')
 
+@if ($errors->any())
+    <div class="alert alert-danger" >
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li> {{ $error }} </li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
     <main class="p-5">
 
         <div class="row text-white">
@@ -25,19 +35,19 @@
                     </div>
                     <div class="mb-3">
                         <label for="thumb" class="form-label">URL Immagine</label>
-                        <input type="text" class="form-control" id="thumb" name="thumb" placeholder="URL" value=" {{$comic['thumb']}} ">
+                        <input type="url" class="form-control" id="thumb" name="thumb" placeholder="URL" value=" {{$comic['thumb']}} ">
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="number" class="form-control" id="price" name="price" placeholder="Prezzo" value=" {{$comic['price']}} ">
+                        <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Prezzo" value=" {{$comic['price']}} ">
                     </div>
                     <div class="mb-3">
                         <label for="series" class="form-label">Serie</label>
                         <input type="text" class="form-control" id="series" name="series" placeholder="Serie" value=" {{$comic['series']}} ">
                     </div>
                     <div class="mb-3">
-                        <label for="sale_date" class="form-label">Data di emissione</label>
-                        <input type="date" class="form-control" id="sale_date" name="sale_data" placeholder="Data di emissione" value=" {{$comic['sale_date']}} ">
+                        <label for="sale_date" class="form-label">Data di uscita</label>
+                        <input type="date" class="form-control" id="sale_date" name="sale_data" placeholder="Data di uscita" value=" {{$comic['sale_date']}} ">
                     </div>
                     <div class="mb-3">
                         <label for="type" class="form-label">Genere</label>

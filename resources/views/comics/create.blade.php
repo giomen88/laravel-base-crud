@@ -4,6 +4,16 @@
 
 @section('main-content')
 
+@if ($errors->any())
+    <div class="alert alert-danger" >
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li> {{ $error }} </li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
     <main class="p-5">
 
         <div class="row text-white">
@@ -23,25 +33,25 @@
                     </div>
                     <div class="mb-3">
                         <label for="thumb" class="form-label">URL Immagine</label>
-                        <input type="text" class="form-control" id="thumb" name="thumb" placeholder="URL">
+                        <input type="url" class="form-control" id="thumb" name="thumb" placeholder="URL">
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="number" class="form-control" id="price" name="price" placeholder="Prezzo" value="0">
+                        <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Prezzo" value="0.00">
                     </div>
                     <div class="mb-3">
                         <label for="series" class="form-label">Serie</label>
                         <input type="text" class="form-control" id="series" name="series" placeholder="Serie">
                     </div>
                     <div class="mb-3">
-                        <label for="sale_date" class="form-label">Data di emissione</label>
-                        <input type="date" class="form-control" id="sale_date" name="sale_data" placeholder="Data di emissione">
+                        <label for="sale_date" class="form-label">Data di uscita</label>
+                        <input type="date" class="form-control" id="sale_date" name="sale_data" placeholder="Data di uscita">
                     </div>
                     <div class="mb-3">
                         <label for="type" class="form-label">Genere</label>
                         <input type="text" class="form-control" id="type" name="type" placeholder="Genere">
                     </div>
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between mt-2">
                         <a class="btn btn-success" href="{{route('comics.index')}} ">Torna alla lista</a>
                         <button type="submit" class="btn btn-primary">Aggiungi</button>
                     </div>
